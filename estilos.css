@@ -452,16 +452,32 @@ video {
     border-color: #ff0808;
 }
 
-.caso-imagen {
+.caso-imagen{
     flex: 1 1 350px;
     background-color: #000;
     max-height: 500px;
 }
 
+
+
+.caso-imagen {
+    flex: 1 1 350px;
+    background-color: #000;
+    /* Se quita max-height: 500px para que no limite la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .caso-imagen img {
     width: 100%;
+
     height: 100%;
     object-fit: cover;
+    height: auto;           /* Permite que la altura crezca proporcionalmente */
+    max-height: 700px;     /* Define un alto máximo adecuado para pantallas grandes */
+    object-fit: contain;   /* MUESTRA LA IMAGEN COMPLETA SIN RECORTAR */
     display: block;
 }
 
@@ -851,4 +867,15 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
+
+}
+.tarifas a{
+    background-color: red;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+
 }
